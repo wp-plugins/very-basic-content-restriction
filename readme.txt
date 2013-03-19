@@ -8,7 +8,7 @@ Stable tag:
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Restricts access to all content except pages for non autheticated users.
+Restricts access to all content except pages for non authenticated users.
 
 == Description ==
 
