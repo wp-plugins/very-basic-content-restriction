@@ -1,6 +1,6 @@
 === Very basic content restriction ===
 Contributors: veganist
-Tags: content restriction
+Tags: content restriction, restrict, access, restricted access, member only, subscriber only, registration
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: 1.0
