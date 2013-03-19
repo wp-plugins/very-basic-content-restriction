@@ -17,9 +17,9 @@ Only pages are public. So if you have a homepage defined, then this page will be
 
 == Installation ==
 
-1. Upload `vers_basic_content_restrictions` to the `/wp-content/plugins/` directory
+1. Upload `very-basic-content-restriction` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure the redirection link on the Options page. If left empty, users will be redirected to WP login.
+3. Configure the redirection link on the options page. If left empty, users will be redirected to your WP login page.
 
 == Frequently asked questions ==
 
