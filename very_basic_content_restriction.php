@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Very Basic Content Restriction
-Plugin URI: http://curlybracket.net/plugz/vbcr
+Plugin URI: http://curlybracket.net/2013/04/16/very-basic-content-restriction/
 Description: Restrict access to categories, posts, tags, taxonomies, feeds. Allow only access to pages. If user is not connected, redirect to login page.
 Version: 1.0
 Author: Ulrike Uhlig
