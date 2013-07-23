@@ -25,8 +25,7 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 ?>
-<?
-
+<?php
 function vbcr_simple_content_restriction() {
     global $wp_query;
     if( !is_user_logged_in() ) {
