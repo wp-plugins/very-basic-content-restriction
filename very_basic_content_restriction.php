@@ -3,7 +3,7 @@
 Plugin Name: Very Basic Content Restriction
 Plugin URI: http://curlybracket.net/2013/04/16/very-basic-content-restriction/
 Description: Restrict access to categories, posts, tags, taxonomies, feeds. Allow only access to pages. If user is not connected, redirect to login page.
-Version: 1.1
+Version: 1.2
 Author: Ulrike Uhlig
 Author URI: http://curlybracket.net
 License: GPL2
@@ -64,7 +64,6 @@ function wp_content_restriction_menu() {
 
 function content_restriction_page_callback() {
     echo '<div class="wrap">';
-    screen_icon();
     echo '<h2>Content Restriction</h2>';
     echo '<form method="post" action="options.php">';
     settings_fields( 'content-restriction-group' );
