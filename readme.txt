@@ -28,6 +28,11 @@ A: No, a per page or per category configuration is not possible.
 
 == Changelog ==
 
-1.0 Initial release
-1.1 Added is_archive() to forbidden pages.
-1.2 Compatibility with WP 3.8
+=1.0=
+* Initial release
+
+=1.1=
+* Added is_archive() to forbidden pages.
+
+= 1.2=
+* Compatibility with WP 3.8
