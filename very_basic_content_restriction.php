@@ -64,15 +64,14 @@ function wp_content_restriction_menu() {
 }
 
 function content_restriction_page_callback() {
-    $form  = '<div class="wrap">';
-    $form .= '<h2>Content Restriction</h2>';
-    $form .= '<form method="post" action="options.php">';
-    $form .= settings_fields( 'content-restriction-group' );
-    $form .= '<label>Redirect to (absolute URL) <input type="text" name="redirect-to" value="'.get_option('redirect-to').'" /></label>';
-    $form .= '<p>If this field is empty, we will redirect people to the login page of your blog.</p>';
-    $form .= submit_button();
-    $form .= '</form></div>';
-	echo $form;
+    echo '<div class="wrap">';
+    echo '<h2>Content Restriction</h2>';
+    echo '<form method="post" action="options.php">';
+    echo settings_fields( 'content-restriction-group' );
+    echo '<label>Redirect to (absolute URL) <input type="text" name="redirect-to" value="'.get_option('redirect-to').'" /></label>';
+    echo '<p>If this field is empty, we will redirect people to the login page of your blog.</p>';
+    echo submit_button();
+    echo '</form></div>';
 }
 
 function register_content_restriction_settings() {
