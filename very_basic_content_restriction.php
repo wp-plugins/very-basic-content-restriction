@@ -3,13 +3,13 @@
 Plugin Name: Very Basic Content Restriction
 Plugin URI: http://curlybracket.net/2013/04/16/very-basic-content-restriction/
 Description: Restrict access to categories, posts, tags, taxonomies, feeds. Allow only access to pages. If user is not connected, redirect to login page.
-Version: 1.3
+Version: 1.4
 Author: Ulrike Uhlig
 Author URI: http://curlybracket.net
 License: GPL2
 */
 /*
-    Copyright 2012  Ulrike Uhlig (email : u@curlybracket.net)
+    Copyright 2012-2014 Ulrike Uhlig (email : u@curlybracket.net)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -31,8 +31,9 @@ function vbcr_simple_content_restriction() {
     if( !is_user_logged_in() ) {
         if( is_category() || is_archive() || is_single() || is_tax() || is_tag() || is_feed() || is_comment_feed() || is_attachment() || is_search() ) {
             $option_redirect_to = get_option('redirect-to');
-            if(empty($option_redirect_to)) {
-                $option_redirect_to = get_bloginfo('url')."/wp-login.php";
+			if(empty($option_redirect_to)) {
+				// retrieve WP login URL
+                $option_redirect_to = wp_login_url();
             }
             $status = "302";
             wp_redirect( $option_redirect_to, $status ); exit;
@@ -63,14 +64,15 @@ function wp_content_restriction_menu() {
 }
 
 function content_restriction_page_callback() {
-    echo '<div class="wrap">';
-    echo '<h2>Content Restriction</h2>';
-    echo '<form method="post" action="options.php">';
-    settings_fields( 'content-restriction-group' );
-    echo '<label>Redirect to (absolute URL) <input type="text" name="redirect-to" value="'.get_option('redirect-to').'" /></label>';
-    echo '<p>If this field is empty, we will redirect people to the login page of your blog.</p>';
-    submit_button();
-    echo '</form></div>';
+    $form  = '<div class="wrap">';
+    $form .= '<h2>Content Restriction</h2>';
+    $form .= '<form method="post" action="options.php">';
+    $form .= settings_fields( 'content-restriction-group' );
+    $form .= '<label>Redirect to (absolute URL) <input type="text" name="redirect-to" value="'.get_option('redirect-to').'" /></label>';
+    $form .= '<p>If this field is empty, we will redirect people to the login page of your blog.</p>';
+    $form .= submit_button();
+    $form .= '</form></div>';
+	echo $form;
 }
 
 function register_content_restriction_settings() {

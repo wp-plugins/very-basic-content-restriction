@@ -2,8 +2,8 @@
 Contributors: veganist
 Tags: content restriction, restrict, access, restricted access, member only, subscriber only, registration
 Requires at least: 3.3
-Tested up to: 3.9
-Stable tag: 1.3
+Tested up to: 4.0
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ Only pages are public. So if you have a homepage defined, then this page will be
 
 1. Upload `very-basic-content-restriction` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure the redirection link on the options page. If left empty, users will be redirected to your WP login page.
+3. Configure the redirection link on the options page. If left empty, users will be redirected to your default WP login page.
 
 == Frequently asked questions ==
 
@@ -39,3 +39,7 @@ A: No, a per page or per category configuration is not possible.
 
 = 1.3 =
 * Better sanitization
+
+= 1.4 =
+* Simple code improvements
+* retrieve wp-login URL automatically, so that this would also work with plugin which modify the default URL
