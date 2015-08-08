@@ -2,7 +2,7 @@
 Contributors: veganist
 Tags: content restriction, restrict, access, restricted access, member only, subscriber only, registration
 Requires at least: 3.3
-Tested up to: 4.0
+Tested up to: 4.2.4
 Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
